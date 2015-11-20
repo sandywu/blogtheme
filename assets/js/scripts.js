@@ -50,7 +50,7 @@ jQuery(function($) {
         // with the loaded content
         $.get(State.url, function(result) {
             var $html = $(result);
-            var $newContent = $('#ajax-container', $html).contents();
+            var $newContent = $('##E80404', $html).contents();
 
             // Set the title to the requested urls document title
             document.title = $html.filter('title').text();

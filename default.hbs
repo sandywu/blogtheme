@@ -17,54 +17,33 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/nprogress.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic" />
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
 
-    <div id="wrapper">
-        <header class="site-header">
-            <div class="container">
-                <div class="site-title-wrapper">
-                    {{#if @blog.logo}}
-                        <a class="site-logo js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
-                    {{else}}
-                        <h1 class="site-title"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-
-                        <a class="button-square" href="{{@blog.url}}/rss"><i class="fa fa-rss"></i></a>
-                    {{/if}}
-                </div>
-
-                <ul class="site-nav">
-                    <li class="site-nav-item"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">Latest Post</a></li>
-                    <li class="site-nav-item"><a class="js-ajax-link js-show-index" title="{{@blog.title}}" href="{{@blog.url}}">Browse Posts</a></li>
-
-                    {{navigation}}
-
-                    {{#if @blog.logo}}
-                        <li class="site-nav-item"><a href="{{@blog.url}}/rss">RSS</a></li>
-                    {{/if}}
-                </ul>
-            </div>
-        </header>
-    
+    <div id="wrapper">    
         <div id="ajax-container">
             {{{body}}}
         </div>
+		<section class="self-descprtion">
+			<div class="body">
+				  <p class="avatar"><img  width="100" height="100" src="http://gtms03.alicdn.com/tps/i3/TB15OhMKFXXXXbUXVXXMluxHXXX-200-200.jpeg" /></p>
+				  <p>我是柳翎，男，目前在杭州－阿里西厂工作，是一名普通的前端开发工程师</p>	
+				  <p>最为擅长熬夜，特技是抗冻，同好者可以加我<a href="#">微信</a>交流</p>
+				  <p>主题偷自淘宝UED前辈<b>「明城」</b>的博客，投诉我可以给我发<a href="mailto:liuling.wb@taobao.com">邮件</a> :)</p>
+			</div>
+		</section>
     </div>
 
     <footer class="footer">
         <div class="container">
-            <div class="site-title-wrapper">
-                <h1 class="site-title"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-
-                <a class="button-square button-jump-top js-jump-top" href="#"><i class="fa fa-angle-up"></i></a>
-            </div>
-
-            <p class="footer-copyright">&copy; {{date format="YYYY"}} / Published with <a href="https://ghost.org">Ghost</a> / <a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></p>
+			<div class="footprint">
+				<p>&copy; 2009 - 2015 Sa </p>
+			</div>
+			<div class="copyright">
+				<p>Hosted by <a href="#">Linode</a></p>
+			</div>			
         </div>
     </footer>
 
@@ -76,6 +55,17 @@
         document.write('<script type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></'+'script>');
     }
     </script>
+	
+	
+    <script async="true" src="http://cdn.staticfile.org/webfont/1.3.0/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: ['Lora']
+				}
+			});
+	</script>
+	
 
     <script type="text/javascript" src="{{asset "js/jquery.history.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/nprogress.js"}}"></script>

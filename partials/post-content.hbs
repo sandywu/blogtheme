@@ -2,7 +2,7 @@
     <header class="post-header">
         <h1 class="post-title">{{title}}</h1>
 
-        <p class="post-date">Published <time datetime="{{published_at}}">{{date format="MMMM Do YYYY"}}</time> <strong>by {{author}}</strong></p>
+        <p class="post-date"><time datetime="{{published_at}}">{{date format="YYYY-M-D"}}</time></p>
     </header>
 
     <div class="post-content clearfix">
@@ -12,30 +12,19 @@
 
         {{{content}}}
     </div>
+	
+	
+	<ul class="post-pagenation">
+	    {{#prev_post}}
+	      <li class="prev">«  <a href="{{url}}">{{title}}</a></li>
+	    {{/prev_post}}
+		
+		
+	    {{#next_post}}
+	       <li class="next"><a href="{{url}}">{{title}}</a>  »</li>
+	     {{/next_post}}
+	</ul>
+	
 
-    <footer class="post-footer clearfix">
-        {{#if tags}}
-            <p class="post-tags"><span>Tagged:</span> {{tags}}</p>
-        {{/if}}
 
-        <div class="share">
-            <a class="icon-twitter" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
-                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                <i class="fa fa-twitter"></i>
-                <span class="hidden">Twitter</span>
-            </a>
-
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                <i class="fa fa-facebook"></i>
-                <span class="hidden">Facebook</span>
-            </a>
-
-            <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-               <i class="fa fa-google-plus"></i>
-                <span class="hidden">Google+</span>
-            </a>
-        </div>
-    </footer>
 </article>
