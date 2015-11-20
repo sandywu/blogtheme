@@ -488,6 +488,7 @@ table {
 .footer {
   background: #303030;
   color: #D3D3D3;
+  padding:0px 1em;
   border-top:3px solid #D20505;;
   height: 80px;
   overflow: auto; }
@@ -667,17 +668,17 @@ table {
 
 /*# sourceMappingURL=style.css.map */
 .self-descprtion {
-	padding: 2em 0;
+	padding: 2em 1em;
 	background: #eee;
 	overflow:hidden;
 	color: #38342B;
-	margin: 1em 0 0 0;
+	margin: 1em 0px 0 0px;
 }
 
 .self-descprtion .body {
     margin: 0 auto;
 	font-size:16px;
-    width: 808px;
+    max-width: 808px;
 }
 
 .self-descprtion .body p {
@@ -719,7 +720,7 @@ table {
 
 
 .footer .container {
-	width:808px;
+	max-width:808px;
 }
 
 
