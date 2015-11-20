@@ -689,6 +689,7 @@ table {
 	float:right;
 	border:5px solid #fff;
 	border-radius:3px;
+	margin-left:8px;
 }
 
 .self-descprtion .avatar img {
