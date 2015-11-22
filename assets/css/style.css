@@ -80,13 +80,16 @@ ol ol {
   padding-left: 5px; }
 
 blockquote {
-  border-left: 1px dotted #303030;
+   padding: 0.6em 1em;
+   background: #f8f8f8;
+   border-left: 0.4em solid #ddd;
   margin: 40px 0;
-  padding: 5px 30px; }
+  font-family:Optima, Georgia, STSong;
+  font-style:normal;
+}
   blockquote p {
     color: #AEADAD;
     display: block;
-    font-style: italic;
     margin: 0;
     width: 100%; }
 
